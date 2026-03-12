@@ -1,6 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" onload="alert('XSS via SVG')">
-  <circle cx="40" cy="40" r="30" stroke="red" fill="none"/>
-  <script xlink:href="data:text/javascript,alert(2)"></script>
-<a xlink:href="javascript:alert('xss')">trigger</a>
-<image href="javascript:alert(1)" />
+<svg xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="30" stroke="red" fill="none"/>
+  <script>alert(document.domain)</script>
 </svg>
